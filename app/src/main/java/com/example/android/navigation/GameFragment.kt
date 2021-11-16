@@ -98,11 +98,14 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        // change the controller so that you can pass args = objects with key/value pairs
+//                        once args are set , you have to pass them thru the controller, how many questions
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment2)
+//                        change the controller so that you can pass args
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment2())
 
                 }
             }
