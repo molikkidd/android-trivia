@@ -57,7 +57,7 @@ dependencies {
     // Core
     implementation "androidx.core:core:$version_core"
 
-    // Material Design
+    // Material Design for side menu
     implementation "com.google.android.material:material:$version_material"
 
     // Add Navigation
